@@ -12,6 +12,8 @@ func setupRouter() *gin.Engine {
 		c.JSON(200, nil)
 	})
 
+	r.POST("/auth", authenticateDevice)
+
 	return r
 }
 
